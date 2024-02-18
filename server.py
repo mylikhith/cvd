@@ -11,12 +11,12 @@ with open(model_filename, "rb") as file:
     model = pickle.load(file)
 
 
-@app.route("/", methods=["GET"])
+@app.route("/home", methods=["GET"])
 def home():
     return "Welcome to the Cardiovascular Disease Prediction API!"
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/", methods=["POST"])
 def predict():
     try:
         # Extracting form data
@@ -35,3 +35,8 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+ https://giant-wasp-cape.cyclic.app
